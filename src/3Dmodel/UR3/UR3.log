@@ -1,0 +1,621 @@
+STEP to UG
+! INFO-     NX STEP AP203 - V8.0
+! INFO-      
+! INFO-     Start of Translation: 1-APR-2019  12:08:31 AM
+! INFO-      
+! STATUS-   Converting Part: F:\LearningNotes\Robotics\Modern Robotics Mechanics planning control\docs\3Dmodel\UR3\UR3.STEP
+! INFO-      
+! INFO-     No solids in STEP file. 
+! INFO-     Available surface and wireframe data will be imported. 
+! INFO-      
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      STEP AP214
+! SUMMARY-  Imp_Level        1
+! SUMMARY-  File_Name        UR3.STEP
+! SUMMARY-  Date             2017-04-08T02:38:58
+! SUMMARY-  Author           TonyKe
+! SUMMARY-  Organization     Unknown
+! SUMMARY-  Pre_Version      SwSTEP 2.0
+! SUMMARY-  Orig_System      SolidWorks 2016
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-  Schema_ID        automotive_design
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  advanced_face ..............................................:   1087
+! SUMMARY-  application_context ........................................:     16
+! SUMMARY-  application_protocol_definition ............................:     16
+! SUMMARY-  axis2_placement_3d .........................................:    954
+! SUMMARY-  b_spline_curve_with_knots ..................................:   1596
+! SUMMARY-  b_spline_curve_with_knots_and_rational_b_spline_curve ......:    176
+! SUMMARY-  b_spline_surface_with_knots ................................:    154
+! SUMMARY-  b_spline_surface_with_knots_and_rational_b_spline_surface ..:    537
+! SUMMARY-  cartesian_point ............................................:  73747
+! SUMMARY-  circle .....................................................:    548
+! SUMMARY-  conical_surface ............................................:     43
+! SUMMARY-  context_dependent_shape_representation .....................:      7
+! SUMMARY-  cylindrical_surface ........................................:    165
+! SUMMARY-  direction ..................................................:   2531
+! SUMMARY-  edge_curve .................................................:   2943
+! SUMMARY-  edge_loop ..................................................:   1276
+! SUMMARY-  face_bound .................................................:     98
+! SUMMARY-  face_outer_bound ...........................................:   1178
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:   1102
+! SUMMARY-  item_defined_transformation ................................:      7
+! SUMMARY-  length_unit_and_si_unit ....................................:   1102
+! SUMMARY-  line .......................................................:    623
+! SUMMARY-  manifold_surface_shape_representation ......................:      7
+! SUMMARY-  next_assembly_usage_occurrence .............................:      7
+! SUMMARY-  open_shell .................................................:     41
+! SUMMARY-  oriented_edge ..............................................:   5228
+! SUMMARY-  plane ......................................................:    188
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:   1102
+! SUMMARY-  product ....................................................:      8
+! SUMMARY-  product_context ............................................:      8
+! SUMMARY-  product_definition .........................................:      8
+! SUMMARY-  product_definition_context .................................:      8
+! SUMMARY-  product_definition_formation_with_specified_source .........:      8
+! SUMMARY-  product_definition_shape ...................................:     15
+! SUMMARY-  product_related_product_category ...........................:      8
+! SUMMARY-  representation_relationship_with_transformation_and_shape ..:      7
+! SUMMARY-  shape_definition_representation ............................:      8
+! SUMMARY-  shape_representation .......................................:      8
+! SUMMARY-  shape_representation_relationship ..........................:      7
+! SUMMARY-  shell_based_surface_model ..................................:      7
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:   1102
+! SUMMARY-  uncertainty_measure_with_unit ..............................:   1102
+! SUMMARY-  vector .....................................................:    623
+! SUMMARY-  vertex_point ...............................................:   1978
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                         101384
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 1-APR-2019 12:08:36 AM
+! STATUS-    
+! INFO-     CV0305 The entities referenced by a context_dependant_shape_rep are
+! INFO-       not coded as to STEP Part 43 requirements.  The references to the
+! INFO-       component and assembly pieces is out of order.  We will attempt
+! INFO-       to correct this with the given data.  This problem should be
+! INFO-       reported to the translator vendor whose product generated this
+! INFO-       STEP file.  If we are unable to rectify this problem the
+! INFO-       components may be positioned incorrectly.
+! INFO-      
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 1-APR-2019  12:08:38 AM
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 25232
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15115 - Disjoint Shell. : 25232
+! ERROR-     
+! INFO-     Could not create sheet body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many sheet body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 23231
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 100730
+! STATUS-    
+! STATUS-   fixing vertex off curve and/or edge reversed faults
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   fixing self-intersecting, invalid and/or degenerate edge faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  sheet body contains fault: 13805 - RTSTGX: Self-intersecting edge curve.
+! WARNING-  sheet body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! INFO-     Filing Part ..: F:\LearningNotes\Robotics\Modern Robotics Mechanics planning control\docs\3Dmodel\UR3\UR3_5_OK
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Group .......................:     1
+! SUMMARY-  Solid .......................:     2
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 1-APR-2019  12:08:48 AM
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 95096
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15115 - Disjoint Shell. : 95096
+! ERROR-     
+! INFO-     Could not create sheet body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many sheet body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 105638
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: F:\LearningNotes\Robotics\Modern Robotics Mechanics planning control\docs\3Dmodel\UR3\UR3_Base_OK
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Group .......................:     1
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              2
+! STATUS-   Creating the UG part (Phase 3 of 3): 1-APR-2019  12:08:49 AM
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 77413
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 12703
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 37932
+! STATUS-    
+! STATUS-   fixing vertex off curve and/or edge reversed faults
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   fixing self-intersecting, invalid and/or degenerate edge faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  sheet body contains fault: 13805 - RTSTGX: Self-intersecting edge curve.
+! WARNING-  sheet body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! INFO-     Filing Part ..: F:\LearningNotes\Robotics\Modern Robotics Mechanics planning control\docs\3Dmodel\UR3\UR3_4_OK
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 1-APR-2019  12:08:58 AM
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 77931
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 79999
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 64860
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 14192
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 21490
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 106714
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 73994
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 34137
+! STATUS-    
+! STATUS-   fixing vertex off curve and/or edge reversed faults
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   fixing self-intersecting, invalid and/or degenerate edge faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  sheet body contains fault: 13805 - RTSTGX: Self-intersecting edge curve.
+! WARNING-  sheet body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! INFO-     Filing Part ..: F:\LearningNotes\Robotics\Modern Robotics Mechanics planning control\docs\3Dmodel\UR3\UR3_3_OK
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     8
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              8
+! STATUS-   Creating the UG part (Phase 3 of 3): 1-APR-2019  12:09:07 AM
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 110405
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 78828
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 111251
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 59500
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15113 - Invalid Loop. : 10
+! ERROR-     
+! INFO-     Could not create sheet body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many sheet body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! INFO-     Degeneracy in b-spline entity 12228 was corrected at or around these
+! INFO-     locations.  A shape change has resulted:
+! INFO-         -6.451790 -43.962005 -102.580991
+! INFO-     SHEET BODY geometry problem.  Error code : 13805
+! INFO-      
+! INFO-     SHEET BODY geometry problem.  Error code : 13805
+! INFO-      
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 43832
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 45674
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 106946
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 73119
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 884
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 60626
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 60282
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 67532
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 111406
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15115 - Disjoint Shell. : 111406
+! ERROR-     
+! INFO-     Could not create sheet body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many sheet body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 73095
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15116 - Non-manifold Vertex. : 26825
+! ERROR-     
+! INFO-     Could not create sheet body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many sheet body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! INFO-     Filing Part ..: F:\LearningNotes\Robotics\Modern Robotics Mechanics planning control\docs\3Dmodel\UR3\UR3_2_OK
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Group .......................:     3
+! SUMMARY-  Solid .......................:    11
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             14
+! STATUS-   Creating the UG part (Phase 3 of 3): 1-APR-2019  12:09:14 AM
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 4503
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 89646
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 83138
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 106695
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15115 - Disjoint Shell. : 106695
+! ERROR-     
+! INFO-     Could not create sheet body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many sheet body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! INFO-     Filing Part ..: F:\LearningNotes\Robotics\Modern Robotics Mechanics planning control\docs\3Dmodel\UR3\UR3_6_OK
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Group .......................:     1
+! SUMMARY-  Solid .......................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              4
+! STATUS-   Creating the UG part (Phase 3 of 3): 1-APR-2019  12:09:15 AM
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 33332
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 1233
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 102401
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 55913
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15116 - Non-manifold Vertex. : 100291
+! ERROR-     
+! INFO-     Could not create sheet body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many sheet body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! INFO-     SHEET BODY geometry problem.  Error code : 13805
+! INFO-      
+! INFO-     SHEET BODY geometry problem.  Error code : 13805
+! INFO-      
+! INFO-     Degeneracy in b-spline entity 15673 was corrected at or around these
+! INFO-     locations.  A shape change has resulted:
+! INFO-         6.451790 102.580991 43.962005
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 103292
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 110998
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 31416
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: F:\LearningNotes\Robotics\Modern Robotics Mechanics planning control\docs\3Dmodel\UR3\UR3_1_OK
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Group .......................:     1
+! SUMMARY-  Solid .......................:     6
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              7
+! STATUS-   Creating the UG part (Phase 3 of 3): 1-APR-2019  12:09:20 AM
+! INFO-     Filing Part ..: F:\LearningNotes\Robotics\Modern Robotics Mechanics planning control\docs\3Dmodel\UR3\UR3.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     7
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              7
+! INFO-      
+! INFO-     Total number of solids input for this translation       :         4
+! INFO-      
+! INFO-     Number of solids created without body validation faults :         0
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :         0
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :         4
+! INFO-      
+! INFO-     End of Translation: 1-APR-2019  12:09:21 AM
+! INFO-      
