@@ -113,6 +113,29 @@ void Matrix3Add(double a[][3], double b[][3], double c[][3])
 }
 
 /**
+*@brief Description:Calculate a 4 x 4  matrix add a 4 x 4  matrix.
+*@param[in]		a		a 4 x 4  matrix.
+*@param[in]		b		a 4 x 4  matrix.
+*@param[out]	c		result of a+b.
+*@return		No return value.
+*@note:
+*@warning:
+*/
+void Matrix4Add(double a[][4], double b[][4], double c[][4])
+{
+	int i;
+	int j;
+	for (i = 0; i < 4; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			c[i][j] = a[i][j] + b[i][j];
+		}
+	}
+	return;
+}
+
+/**
 *@brief Description:Calculate a 3 x 3  matrix Subtract a 3 x 3  matrix.
 *@param[in]		a		a 3 x 3  matrix.
 *@param[in]		b		a 3 x 3  matrix.
@@ -128,6 +151,29 @@ void Matrix3Sub(double a[][3], double b[][3], double c[][3])
 	for (i = 0; i < 3; i++)
 	{
 		for (j = 0; j < 3; j++)
+		{
+			c[i][j] = a[i][j] - b[i][j];
+		}
+	}
+	return;
+}
+
+/**
+*@brief Description:Calculate a 4 x 4  matrix Subtract a 4 x 4  matrix.
+*@param[in]		a		a 4 x 4  matrix.
+*@param[in]		b		a 4 x 4  matrix.
+*@param[out]	c		result of a-b.
+*@return		No return value.
+*@note:
+*@warning:
+*/
+void Matrix4Sub(double a[][4], double b[][4], double c[][4])
+{
+	int i;
+	int j;
+	for (i = 0; i < 4; i++)
+	{
+		for (j = 0; j < 4; j++)
 		{
 			c[i][j] = a[i][j] - b[i][j];
 		}
@@ -1665,10 +1711,15 @@ int svdcmp(double *a, int m, int n, double tol, double *w, double *v)
 		}
 	}
 	free(rv1);
+	reorder(a, m, n, w, v);//对特征值按降序排列，且调整对应矩阵
 	return 0;
 }
 
-
+double u[PINV_MAX * PINV_MAX] = { 0 };
+double w[PINV_MAX] = { 0 };
+double vw[PINV_MAX * PINV_MAX] = { 0 };
+double v[PINV_MAX * PINV_MAX] = { 0 };
+double uT[PINV_MAX * PINV_MAX] = { 0 };
 /**
 *@brief			Computes Moore-Penrose pseudoinverse by  Singular Value Decomposition (SVD) algorithm.
 *@param[in]		a			an arbitrary order matrix.
@@ -1685,45 +1736,9 @@ int svdcmp(double *a, int m, int n, double tol, double *w, double *v)
 int MatrixPinv(const double *a, int m, int n, double tol, double *b)
 {
 	int i, j;
-
-	double *u = (double *)malloc(m*n * sizeof(double));
-	if (u == NULL )
-	{
-		return 1;
-	}
-	double *w = (double *)malloc(n * sizeof(double));
-	if (w == NULL)
-	{
-		free(u);
-		return 1;
-	}
-	double *v = (double *)malloc(n*n * sizeof(double));
-	if (v == NULL)
-	{
-		free(u);
-		free(w);
-		return 1;
-	}
-	double *vw = (double *)malloc(n*n * sizeof(double));
-	if (vw == NULL)
-	{
-		free(u);
-		free(w);
-		free(v);
-		return 1;
-	}
-	double *uT = (double *)malloc(m*n * sizeof(double));
-	if (uT == NULL)
-	{
-		free(u);
-		free(w);
-		free(v);
-		free(vw);
-		return 1;
-	}
-
+	int ret;
 	memcpy(u, a, m*n * sizeof(double));
-	svdcmp(u, m, n, tol,w, v);
+	ret=svdcmp(u, m, n, tol,w, v);
 	for (i = 0; i < n; i++)
 	{
 		if (w[i] <= tol)
@@ -1742,14 +1757,8 @@ int MatrixPinv(const double *a, int m, int n, double tol, double *b)
 			vw[i*n + j] = v[i*n + j] * w[j];
 		}
 	}
-
 	MatrixT(u, m, n, uT);
 	MatrixMult(vw, n, n, uT, m, b);
-	free(u);
-	free(w);
-	free(v);
-	free(vw);
-	free(uT);
 	return 0;
 }
 
@@ -2120,7 +2129,7 @@ void AxisAngToQuaternion(double omg[3],double theta, double q[4])
 */
 void QuaternionToRot(double q[4], double R[3][3])
 {
-	R[0][0] = q[0] * q[0] - q[1] * q[1] - q[2] * q[2] - q[3] * q[3];
+	R[0][0] = q[0] * q[0] + q[1] * q[1] - q[2] * q[2] - q[3] * q[3];
 	R[0][1] = 2.0*(q[1] * q[2] - q[0] * q[3]);
 	R[0][2] = 2.0*(q[0] * q[2] + q[1] * q[3]);
 	R[1][0] = 2.0*(q[0] * q[3] + q[1] * q[2]);
@@ -2146,6 +2155,48 @@ void RotToQuaternion(double R[3][3], double q[4])
 	double theta;
 	RotToAxisAng(R, omghat, &theta);
 	AxisAngToQuaternion(omghat, theta, q);
+	return;
+}
+
+
+/**
+* @brief 			单位四元数转换为旋转矩阵。
+* @param[in]		q				单位四元数[ox,oy,oz,ow].
+* @param[out]		R				旋转矩阵.
+* @return			无返回值.
+* @note:
+* @warning:         (1)此函数不对输入参数做检查，需保证输入为单位四元数。
+					(2)四元数顺序为[ox,oy,oz,w]。
+*/
+void q2rot(double q[4], double R[3][3])
+{
+	double q1[4] = { 0 };
+
+	q1[0] = q[3];
+	q1[1] = q[0];
+	q1[2] = q[1];
+	q1[3] = q[2];
+	QuaternionToRot(q1, R);
+	return;
+}
+
+/**
+* @brief 			旋转矩阵转单位四元数。
+* @param[in]		R				旋转矩阵
+* @param[out]		q				单位四元数.[ox,oy,oz,ow].
+* @return			无返回值.
+* @note:
+* @warning:         (1)此函数不对输入参数做检查，需保证输入为旋转矩阵。
+					(2)四元数顺序为[ox,oy,oz,w]。
+*/
+void rot2q(double R[3][3], double q[4])
+{
+	double q1[4] = { 0 };
+	RotToQuaternion(R, q1);
+	q[0] = q1[1];
+	q[1] = q1[2];
+	q[2] = q1[3];
+	q[3] = q1[0];
 	return;
 }
 

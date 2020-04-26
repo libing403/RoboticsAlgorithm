@@ -12,6 +12,6 @@
 #include "TestDemo.h"
 int main()
 {
-    test_MatrixPinv();
+    test_MatrixLog3();
 	return 0;
 }

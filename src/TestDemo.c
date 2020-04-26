@@ -128,9 +128,9 @@ void test_MatrixLog3()
 	double theta = 30 * PI / 180;
 	double R[3][3] =
 	{
-		0, 0, 1,
-		1, 0, 0,
-		0, 1, 0
+		cos(theta), -sin(theta), 0,
+		sin(theta), cos(theta), 0,
+		0, 0, 1
 	};
 	double so3Mat[3][3] = { 0 };
 	MatrixLog3(R, so3Mat);

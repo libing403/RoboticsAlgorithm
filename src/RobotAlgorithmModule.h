@@ -14,8 +14,10 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-	#define			DEBUGMODE			1			//打印调试信息
 
+	#define			PINV_MAX			200       //求矩阵伪逆允许最大维数
+
+	#define			DEBUGMODE			1			//打印调试信息
 	#define			PI					3.14159265358979323846
 	//if the norm of vector is near zero(< 1.0E-6),regard as zero.
 	#define			ZERO_VECTOR			1.0E-6	
@@ -40,6 +42,126 @@ extern "C" {
 	*/
 	int GrublersFormula(int m, int N,  int J, int *f);
 
+	/**
+	*@brief Description: Make  matrix b equal to  matrix a.
+	*@param[in]			a		a 3 x 3  matrix.
+	*@param[out]		b		result,b=a.
+	*@return		No return value.
+	*@note:
+	*@warning:
+	*/
+	void Matrix3Equal(double a[][3], double b[][3]);
+
+	/**
+	*@brief Description: Make  matrix b equal to  matrix a.
+	*@param[in]			a		a 4 x 4  matrix.
+	*@param[out]		b		result,b=a.
+	*@return		No return value.
+	*@note:
+	*@warning:
+	*/
+	void Matrix4Equal(double a[][4], double b[][4]);
+
+	/**
+	*@brief Description:Calculate a 3 x 3  matrix add a 3 x 3  matrix.
+	*@param[in]		a		a 3 x 3  matrix.
+	*@param[in]		b		a 3 x 3  matrix.
+	*@param[out]	c		result of a+b.
+	*@return		No return value.
+	*@note:
+	*@warning:
+	*/
+	void Matrix3Add(double a[][3], double b[][3], double c[][3]);
+
+	/**
+	*@brief Description:Calculate a 4 x 4  matrix add a 4 x 4  matrix.
+	*@param[in]		a		a 4 x 4  matrix.
+	*@param[in]		b		a 4 x 4  matrix.
+	*@param[out]	c		result of a+b.
+	*@return		No return value.
+	*@note:
+	*@warning:
+	*/
+	void Matrix4Add(double a[][4], double b[][4], double c[][4]);
+
+
+	/**
+	*@brief Description:Calculate a 3 x 3  matrix Subtract a 3 x 3  matrix.
+	*@param[in]		a		a 3 x 3  matrix.
+	*@param[in]		b		a 3 x 3  matrix.
+	*@param[out]	c		result of a-b.
+	*@return		No return value.
+	*@note:
+	*@warning:
+	*/
+	void Matrix3Sub(double a[][3], double b[][3], double c[][3]);
+
+	/**
+	*@brief Description:Calculate a 4 x 4  matrix Subtract a 4 x 4  matrix.
+	*@param[in]		a		a 4 x 4  matrix.
+	*@param[in]		b		a 4 x 4  matrix.
+	*@param[out]	c		result of a-b.
+	*@return		No return value.
+	*@note:
+	*@warning:
+	*/
+	void Matrix4Sub(double a[][4], double b[][4], double c[][4]);
+
+	/**
+	*@brief Description: Calculate two 3 x 3  matrix multiplication.
+	*@param[in]		a		a 3 x 3  matrix.
+	*@param[in]		b		a 3 x 3  matrix.
+	*@param[out]	c		result of a*b.
+	*@return		No return value.
+	*@note:
+	*@warning:
+	*/
+	void Matrix3Mult(double a[][3], double b[][3], double c[][3]);
+
+	/**
+	*@brief Description: Calculate two 4 x 4  matrix multiplication.
+	*@param[in]		a		a 4 x 4  matrix.
+	*@param[in]		b		a 4 x 4  matrix.
+	*@param[out]	c		result of a*b.
+	*@return		No return value.
+	*@note:
+	*@warning:
+	*/
+	void Matrix4Mult(double a[][4], double b[][4], double c[][4]);
+
+	/**
+	*@brief Description: Calculate  3 x 3  matrix multiply a value.
+	*@param[in]		a		a 3 x 3  matrix.
+	*@param[in]		Value	a scalar value.
+	*@param[out]	c		result of a*Value.
+	*@return		No return value.
+	*@note:
+	*@warning:
+	*/
+	void Matrix3MultValue(double a[][3], double Value, double c[][3]);
+
+	/**
+	*@brief Description: Calculate  4 x 4  matrix multiply a value.
+	*@param[in]		a		a 4 x 4  matrix.
+	*@param[in]		Value	a scalar value.
+	*@param[out]	c		result of a*Value.
+	*@return		No return value.
+	*@note:
+	*@warning:
+	*/
+	void Matrix4MultValue(double a[][4], double Value, double c[][4]);
+
+
+	/**
+	*@brief Description:Computes the result of a 3 x 3 Matrix multiply a 3-vector.
+	*@param[in]		R			a 3 x 3 Matrix.
+	*@param[in]		vec1		an input of 3-vector.
+	*@param[out]	vec2		the output result of 3-vector.
+	*@return		No return value.
+	*@note:
+	*@warning:
+	*/
+	void Matrix3MultVec(double R[3][3], double vec1[3], double vec2[3]);
 
 	/**
 	*@brief			Computes the inverse of the rotation matrix R.
@@ -466,6 +588,27 @@ extern "C" {
 	*/
 	void RotToQuaternion(double R[3][3], double q[4]);
 
+	/**
+	* @brief 			单位四元数转换为旋转矩阵。
+	* @param[in]		q				单位四元数[ox,oy,oz,ow].
+	* @param[out]		R				旋转矩阵.
+	* @return			无返回值.
+	* @note:
+	* @warning:         (1)此函数不对输入参数做检查，需保证输入为单位四元数。
+						(2)四元数顺序为[ox,oy,oz,w]。
+	*/
+	void q2rot(double q[4], double R[3][3]);
+
+	/**
+	* @brief 			旋转矩阵转单位四元数。
+	* @param[in]		R				旋转矩阵
+	* @param[out]		q				单位四元数.[ox,oy,oz,ow].
+	* @return			无返回值.
+	* @note:
+	* @warning:         (1)此函数不对输入参数做检查，需保证输入为旋转矩阵。
+						(2)四元数顺序为[ox,oy,oz,w]。
+	*/
+	void rot2q(double R[3][3], double q[4]);
 
 	/**
 	* @brief 			Description: structure of LinePath interpolation parameters.
