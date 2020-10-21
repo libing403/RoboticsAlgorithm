@@ -1,11 +1,11 @@
 /**
  * @brief			Description: 
  * @file:			TestDemo.h
- * @author:			LiBing
- * @date:			2019/04/14 11:26
- * Copyright(c) 	2019 LiBing. All rights reserved. 
- *					https://blog.csdn.net/libing403 					 
- * Contact 			1540845930@qq.com
+ * @author:			Brian
+ * @date:			2019/03/01 12:23
+ * Copyright(c) 	2019 Brian. All rights reserved.
+ *
+ * Contact 			https://blog.csdn.net/Galaxy_Robot
  * @note:     
  * @warning: 		
 */

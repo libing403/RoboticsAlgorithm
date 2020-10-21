@@ -2,10 +2,11 @@
  * @brief			Description: Algorithm module of robotics, according to the
  *					book[modern robotics : mechanics, planning, and control].
  * @file:			RobotAlgorithmModule.h
- * @author:			LiBing
- * @date:			2019/03/01 12:50
- * Copyright(c) 	2019 LiBing. All rights reserved.
- *					https://blog.csdn.net/libing403 
+ * @author:			Brian
+ * @date:			2019/03/01 12:23
+ * Copyright(c) 	2019 Brian. All rights reserved.
+ *
+ * Contact 			https://blog.csdn.net/Galaxy_Robot
  * @note:     
  * @warning: 		
 */

@@ -1,11 +1,11 @@
 ﻿/**
  * @brief			Description: Test Demos for robot algorithm modules.
  * @file:			TestDemo.c
- * @author:			LiBing
- * @date:			2019/03/01 12:20
- * Copyright(c) 	2019 LiBing. All rights reserved.
- *					https://blog.csdn.net/libing403  					 
- * Contact 			1540845930@qq.com
+ * @author:			Brian
+ * @date:			2019/03/01 12:23
+ * Copyright(c) 	2019 Brian. All rights reserved.
+ *
+ * Contact 			https://blog.csdn.net/Galaxy_Robot
  * @note:     
  * @warning: 		
 */
